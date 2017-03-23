@@ -15,21 +15,7 @@ Game::Game() {
 
   // Set max length of the history
   linenoise::SetHistoryMaxLen(4);
-
-  linenoise::SetCompletionCallback([](const char* editBuffer, std::vector<std::string>& completions) {
-      if (editBuffer[0] == 'h') {
-        completions.push_back("help");
-      }
-
-      if (editBuffer[0] == 'e') {
-        completions.push_back("exit");
-        completions.push_back("echo");
-      }
-
-      if (editBuffer[0] == 'q') {
-        completions.push_back("quit");
-      }
-    });
+  setupCompletion();
 
   // Load history
   linenoise::LoadHistory(path);
@@ -70,6 +56,23 @@ Game::Game() {
   }
 
   std::cout << "Hope you enjoyed the game.";
+}
+
+void Game::setupCompletion() {
+  linenoise::SetCompletionCallback([](const char* editBuffer, std::vector<std::string>& completions) {
+      if (editBuffer[0] == 'h') {
+        completions.push_back("help");
+      }
+
+      if (editBuffer[0] == 'e') {
+        completions.push_back("exit");
+        completions.push_back("echo");
+      }
+
+      if (editBuffer[0] == 'q') {
+        completions.push_back("quit");
+      }
+    });
 }
 
 } /* namespace wonder */

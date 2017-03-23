@@ -9,7 +9,7 @@ class Game {
 public:
   Game();
 private:
-
+  void setupCompletion();
 };
 
 } /* namespace wonder */
