@@ -5,6 +5,8 @@ if(NOT DEFINED WONDER_LIBRARIES)
 endif()
 
 add_executable(${EXE_NAME}
+  Item.cpp
+  Room.cpp
   Main.cpp
   Game.cpp
 )

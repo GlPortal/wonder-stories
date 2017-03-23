@@ -1,4 +1,6 @@
 #include <wonder/Game.hpp>
+#include <wonder/Room.hpp>
+#include <wonder/Item.hpp>
 #include <string>
 #include <linenoise.hpp>
 #include <iostream>
