@@ -34,4 +34,8 @@ void Game::setInput(std::string line) {
   this->input = line;
 }
 
+World &Game::getWorld() {
+  return world;
+}
+
 } /* namespace wonder */

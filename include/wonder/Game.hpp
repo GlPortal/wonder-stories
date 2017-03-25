@@ -13,6 +13,7 @@ public:
   void update();
   bool isRunning;
   void setInput(std::string input);
+  World &getWorld();
 private:
   World world;
   std::string input;

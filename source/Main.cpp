@@ -1,4 +1,5 @@
 #include <wonder/Game.hpp>
+#include <wonder/Renderer.hpp>
 #include <wonder/InputDriver.hpp>
 
 #include <radix/env/Environment.hpp>
@@ -17,9 +18,11 @@ int main(const int argc, char *argv[]) {
   try {
     Game game;
     InputDriver inputDriver(game);
+    Renderer renderer(game.getWorld());
     while (game.isRunning) {
       inputDriver.processInput();
       game.update();
+      renderer.render();
     }
   } catch (radix::Exception::Error &err) {
     radix::Util::Log(radix::Error, err.source()) << err.what();
