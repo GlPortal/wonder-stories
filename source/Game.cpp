@@ -9,7 +9,7 @@ using namespace radix;
 
 namespace wonder {
 
-Game::Game():world() {
+Game::Game():isRunning(true), world() {
 
 }
 
