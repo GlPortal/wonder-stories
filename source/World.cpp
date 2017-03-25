@@ -7,7 +7,8 @@ using namespace radix;
 namespace wonder {
 
   World::World():roomMap() {
-    Room startRoom("start", "A plain and empty room.");
+    currentRoom = "start";
+    Room startRoom(currentRoom, "A plain and empty room.");
     roomMap.insert(std::pair<std::string, Room>(std::string("start"), startRoom) );
   }
 

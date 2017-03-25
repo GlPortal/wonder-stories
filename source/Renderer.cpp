@@ -10,6 +10,7 @@ namespace wonder {
   }
 
   void Renderer::render(){
+    std::cout << world.currentRoom << std::endl;
     std::cout << "You are in a room." << std::endl;
   }
 
