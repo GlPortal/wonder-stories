@@ -20,9 +20,9 @@ int main(const int argc, char *argv[]) {
     InputDriver inputDriver(game);
     Renderer renderer(game.getWorld());
     while (game.isRunning) {
+      renderer.render();
       inputDriver.processInput();
       game.update();
-      renderer.render();
     }
   } catch (radix::Exception::Error &err) {
     radix::Util::Log(radix::Error, err.source()) << err.what();
