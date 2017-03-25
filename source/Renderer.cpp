@@ -11,7 +11,7 @@ namespace wonder {
 
   void Renderer::render(){
     std::cout << world.currentRoom << std::endl;
-    std::cout << "You are in a room." << std::endl;
+    std::cout << world.roomMap.find(world.currentRoom)->second.description << std::endl;
   }
 
 } /* namespace wonder */
