@@ -22,6 +22,12 @@ void Game::update(std::string line) {
   if (line == "echo") {
     std::cout <<  line << std::endl;
   }
+
+  if (line == "exit") {
+    std::cout <<  "Exiting game" << std::endl;
+    this->isRunning = false;
+  }
+
 }
 
 void Game::setupRooms() {

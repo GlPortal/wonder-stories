@@ -11,6 +11,7 @@ class Game {
 public:
   Game();
   void update(std::string input);
+  bool isRunning;
 private:
   Room room;
   World world;

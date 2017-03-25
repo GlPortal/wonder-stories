@@ -11,18 +11,13 @@ namespace wonder {
 InputDriver::InputDriver(Game &game):game(game) {
   setupReadline();
 
-  while (true) {
+  while (game.isRunning) {
       std::string line;
 
       auto quit = linenoise::Readline(" > ", line);
 
       if (quit) {
         break;
-      }
-
-      if (line == "exit") {
-        std::cout <<  "Exiting game" << std::endl;
-        exit(0);
       }
 
       game.update(line);
