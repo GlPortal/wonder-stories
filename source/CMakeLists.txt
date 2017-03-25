@@ -5,10 +5,14 @@ if(NOT DEFINED WONDER_LIBRARIES)
 endif()
 
 add_executable(${EXE_NAME}
+  World.cpp
   Item.cpp
   Room.cpp
-  Main.cpp
+  Command.cpp
+  WalkCommand.cpp
   Game.cpp
+  Main.cpp
+  InputDriver.cpp
 )
 
 target_compile_definitions(${EXE_NAME} PUBLIC ${RADIX_DEFINITIONS})

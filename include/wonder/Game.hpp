@@ -2,14 +2,19 @@
 #define GAME_HPP
 
 #include <radix/env/Config.hpp>
+#include <wonder/Room.hpp>
+#include <wonder/Renderer.hpp>
 
 namespace wonder {
 
 class Game {
 public:
   Game();
+  void update(std::string input);
 private:
-  void setupCompletion();
+  Room room;
+  World world;
+  void setupRooms();
 };
 
 } /* namespace wonder */

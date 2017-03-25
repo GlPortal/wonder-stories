@@ -1,4 +1,5 @@
 #include <wonder/Game.hpp>
+#include <wonder/InputDriver.hpp>
 
 #include <radix/env/Environment.hpp>
 #include <radix/env/ArgumentsParser.hpp>
@@ -15,6 +16,7 @@ int main(const int argc, char *argv[]) {
   radix::ArgumentsParser::setEnvironmentFromArgs(argc, argv);
   try {
     Game game;
+    InputDriver inputDriver(game);
   } catch (radix::Exception::Error &err) {
     radix::Util::Log(radix::Error, err.source()) << err.what();
   }
