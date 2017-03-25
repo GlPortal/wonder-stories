@@ -13,26 +13,25 @@ Game::Game():world() {
 
 }
 
-void Game::update(std::string line) {
-  if (line == "help") {
+void Game::update() {
+  if (input == "help") {
     std::cout <<  "Valid commands:" << std::endl;
     std::cout <<  "quit, run, exit, help" << std::endl;
   }
 
-  if (line == "echo") {
-    std::cout <<  line << std::endl;
+  if (input == "echo") {
+    std::cout << input << std::endl;
   }
 
-  if (line == "exit") {
+  if (input == "exit") {
     std::cout <<  "Exiting game" << std::endl;
     this->isRunning = false;
   }
 
 }
 
-void Game::setupRooms() {
-  room.name = "Start Room";
-  room.description = "The floor feels warm.";
+void Game::setInput(std::string line) {
+  this->input = line;
 }
 
 } /* namespace wonder */

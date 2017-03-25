@@ -8,6 +8,7 @@ namespace wonder {
   class InputDriver {
   public:
     InputDriver(Game &game);
+    void processInput();
   private:
     Game &game;
     const std::string path = "history.txt";

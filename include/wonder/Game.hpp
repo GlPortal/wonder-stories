@@ -10,12 +10,12 @@ namespace wonder {
 class Game {
 public:
   Game();
-  void update(std::string input);
+  void update();
   bool isRunning;
+  void setInput(std::string input);
 private:
-  Room room;
   World world;
-  void setupRooms();
+  std::string input;
 };
 
 } /* namespace wonder */

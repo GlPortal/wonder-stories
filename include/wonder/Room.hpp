@@ -10,7 +10,7 @@ namespace wonder {
 
   class Room {
   public:
-    Room();
+    Room(std::string name, std::string description);
     std::map<std::string, bool> connectedRooms;
     std::string name;
     std::string description;

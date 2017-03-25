@@ -6,7 +6,6 @@ using namespace radix;
 
 namespace wonder {
 
-Room::Room() {
+Room::Room(std::string name, std::string description): name(name), description(description) {
 }
-
 } /* namespace wonder */

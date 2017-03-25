@@ -10,26 +10,6 @@ namespace wonder {
 
 InputDriver::InputDriver(Game &game):game(game) {
   setupReadline();
-
-  while (game.isRunning) {
-      std::string line;
-
-      auto quit = linenoise::Readline(" > ", line);
-
-      if (quit) {
-        break;
-      }
-
-      game.update(line);
-
-      // Add line to history
-      linenoise::AddHistory(line.c_str());
-
-      // Save history
-      linenoise::SaveHistory(path.c_str());
-  }
-
-  std::cout << "Hope you enjoyed the game." << std::endl;
 }
 
 void InputDriver::setupReadline() {
@@ -42,6 +22,23 @@ void InputDriver::setupReadline() {
 
   // Load history
   linenoise::LoadHistory(path.c_str());
+}
+
+void InputDriver::processInput() {
+  std::string line;
+
+  auto quit = linenoise::Readline(" > ", line);
+
+  if (quit) {
+    game.isRunning = false;
+  }
+
+  game.setInput(line);
+  // Add line to history
+  linenoise::AddHistory(line.c_str());
+
+  // Save history
+  linenoise::SaveHistory(path.c_str());
 }
 
 void InputDriver::setupCompletion() {
