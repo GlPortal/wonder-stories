@@ -8,10 +8,10 @@ add_executable(${EXE_NAME}
   StringUtil.cpp
   SuperString.cpp
   Renderer.cpp
-  World.cpp
-  Item.cpp
-  Room.cpp
   Command.cpp
+  Item.cpp
+  World.cpp
+  Room.cpp
   WalkCommand.cpp
   Game.cpp
   Main.cpp

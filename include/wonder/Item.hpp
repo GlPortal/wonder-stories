@@ -8,7 +8,7 @@
 #include <wonder/Command.hpp>
 
 namespace wonder {
-
+  class Command;
   class Item {
   private:
 

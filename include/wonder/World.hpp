@@ -3,15 +3,19 @@
 
 #include <string>
 #include <map>
+#include <vector>
 #include <wonder/Room.hpp>
+#include <wonder/Item.hpp>
 #include <wonder/SuperString.hpp>
 
 namespace wonder {
   class Room;
+  class Item;
   class World {
   public:
     World();
     std::map<std::string, Room> roomMap;
+    std::vector<Item> items;
     std::string currentRoom;
     SuperString lastUserInput;
     std::string commandOutput;
