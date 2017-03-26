@@ -10,8 +10,12 @@ namespace wonder {
   }
 
   void Renderer::render(){
-    std::cout << std::endl << "Points: 0  Room: " << world.currentRoom << std::endl << std::endl;
-    std::cout << world.roomMap.find(world.currentRoom)->second.description << std::endl;
+    std::cout << "┌────────────────────────────┐" << std::endl;
+    std::cout << "│Points: 0  Room: " << world.currentRoom << "      │" << std::endl;
+    std::cout << "└────────────────────────────┘" << std::endl;
+    std::cout << world.roomMap.find(world.currentRoom)->second.description;
+    std::cout << std::endl << world.commandOutput;
+    world.commandOutput = "";
   }
 
 } /* namespace wonder */

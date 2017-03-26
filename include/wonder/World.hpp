@@ -14,6 +14,7 @@ namespace wonder {
     std::map<std::string, Room> roomMap;
     std::string currentRoom;
     SuperString lastUserInput;
+    std::string commandOutput;
   };
 
 } /* namespace wonder */

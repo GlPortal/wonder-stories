@@ -18,15 +18,15 @@ void Game::update() {
   SuperString input = world.lastUserInput;
   if (input.has(0)) {
     if (input.get(0) == "help") {
-      std::cout <<  "Valid commands:" << std::endl;
-      std::cout <<  "quit, run, exit, help" << std::endl;
+      world.commandOutput += "Valid commands: \n";
+      world.commandOutput += "quit, run, exit, help \n";
     }
 
     if (input.get(0) == "echo") {
       if (input.has(1)) {
-        std::cout << input.get(1) << std::endl;
+        world.commandOutput += input.get(1) + "\n";
       } else {
-        std::cout << "Parameter missing" << std::endl;
+        world.commandOutput += "Parameter missing \n";
       }
     }
 

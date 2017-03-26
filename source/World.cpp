@@ -6,7 +6,7 @@ using namespace radix;
 
 namespace wonder {
 
-  World::World():roomMap(), lastUserInput("") {
+  World::World():roomMap(), lastUserInput(""), commandOutput("") {
     currentRoom = "start";
     std::string description =
       "You are in a plain and empty room.\n\nThere is a banjo on the floor.";
