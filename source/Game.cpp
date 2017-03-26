@@ -23,7 +23,11 @@ void Game::update() {
     }
 
     if (input.get(0) == "echo") {
-      std::cout << input.get(0) << std::endl;
+      if (input.has(1)) {
+        std::cout << input.get(1) << std::endl;
+      } else {
+        std::cout << "Parameter missing" << std::endl;
+      }
     }
 
     if (input.get(0) == "exit") {
