@@ -2,6 +2,7 @@
 #define INPUT_DRIVER_HPP
 
 #include <wonder/Game.hpp>
+#include <wonder/World.hpp>
 
 namespace wonder {
 

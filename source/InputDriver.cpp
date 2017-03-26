@@ -1,4 +1,5 @@
 #include <wonder/Game.hpp>
+#include <wonder/World.hpp>
 #include <wonder/InputDriver.hpp>
 #include <string>
 #include <linenoise.hpp>
@@ -33,7 +34,7 @@ void InputDriver::processInput() {
     game.isRunning = false;
   }
 
-  game.setInput(line);
+  game.getWorld().lastUserInput.set(line);
   // Add line to history
   linenoise::AddHistory(line.c_str());
 

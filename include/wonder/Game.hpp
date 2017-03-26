@@ -4,6 +4,7 @@
 #include <radix/env/Config.hpp>
 #include <wonder/Room.hpp>
 #include <wonder/Renderer.hpp>
+#include <wonder/Renderer.hpp>
 
 namespace wonder {
 
@@ -12,11 +13,9 @@ public:
   Game();
   void update();
   bool isRunning;
-  void setInput(std::string input);
   World &getWorld();
 private:
   World world;
-  std::string input;
 };
 
 } /* namespace wonder */

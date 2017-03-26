@@ -10,7 +10,7 @@ namespace wonder {
   }
 
   void Renderer::render(){
-    std::cout << world.currentRoom << std::endl;
+    std::cout << std::endl << "Points: 0  Room: " << world.currentRoom << std::endl << std::endl;
     std::cout << world.roomMap.find(world.currentRoom)->second.description << std::endl;
   }
 

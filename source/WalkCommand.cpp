@@ -7,7 +7,10 @@ using namespace radix;
 namespace wonder {
 
   void WalkCommand::execute(){
-    std::cout << world.lastUserInput;
+    if (world.lastUserInput.has(1)) {
+      std::cout << world.lastUserInput.get(1);
+    }
+
   }
 
 } /* namespace wonder */

@@ -5,6 +5,8 @@ if(NOT DEFINED WONDER_LIBRARIES)
 endif()
 
 add_executable(${EXE_NAME}
+  StringUtil.cpp
+  SuperString.cpp
   Renderer.cpp
   World.cpp
   Item.cpp
