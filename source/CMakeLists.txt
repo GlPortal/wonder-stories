@@ -5,6 +5,9 @@ if(NOT DEFINED WONDER_LIBRARIES)
 endif()
 
 add_executable(${EXE_NAME}
+  CommandSystem.cpp
+  Game.cpp
+  Main.cpp
   StringUtil.cpp
   SuperString.cpp
   Renderer.cpp
@@ -13,8 +16,6 @@ add_executable(${EXE_NAME}
   World.cpp
   Room.cpp
   WalkCommand.cpp
-  Game.cpp
-  Main.cpp
   InputDriver.cpp
 )
 

@@ -4,7 +4,6 @@
 #include <radix/env/Config.hpp>
 #include <wonder/Room.hpp>
 #include <wonder/Renderer.hpp>
-#include <wonder/Renderer.hpp>
 
 namespace wonder {
 
