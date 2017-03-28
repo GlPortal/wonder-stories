@@ -15,7 +15,6 @@ namespace wonder {
   public:
     World();
     std::map<std::string, Room> roomMap;
-    std::vector<Item> items;
     std::string currentRoom;
     SuperString lastUserInput;
     std::string commandOutput;

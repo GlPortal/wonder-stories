@@ -14,7 +14,6 @@ namespace wonder {
 
   public:
     Item();
-    std::string name;
     std::string description;
     std::map<std::string, Command> verbMap;
   };
